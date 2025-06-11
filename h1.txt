@@ -131,4 +131,8 @@ git tag -d v1.4
 
 git push <remote> :refs/tags/<tagname>:
 
+git push <remote> :refs/tags/<tagname>
+
 $ git push origin --delete <tagname>
+
+
