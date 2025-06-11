@@ -1,1 +1,134 @@
-helllo
+git init
+
+git add <name> or . (stages changes for the next commit)
+
+git commit -m ""
+
+git commit -am "" (commit meanwhile add)
+
+git commit --amend
+
+git rm <name> (remove files from Git's tracking)
+
+git log --pretty (check commit log)
+
+git log --pretty=oneline (only one line)
+
+git log --graph
+
+git log --all --graph
+
+git log -p
+
+git log -stat
+
+git remote add <remote-name> ssh
+
+git remote
+
+git status
+
+git fetch <remote_name>
+
+git push <remote> <branch>
+
+git push origin master
+
+git remote show <remote> (If you want to see more information about a particular remote,)
+
+git remote rename origin shuimu
+
+git remote remove origin
+
+git branch --list
+
+git branch feature1 (create 1 new branch)
+
+git checkout feature1 (switch to branch feature1)
+
+git checkout -b feature2 (create new one and switch to it)
+
+git merge <branch_name> (merge this to current branch)
+
+git push -u origin master
+
+git push origin feature1
+
+git checkout -b feature1 origin/feature1 (Creating a new local branch from an existing remote branch)
+
+git checkout --track origin/feature1
+
+git stash (store your current code which is not in stage area)
+
+git stash apply (restore your code)
+
+git stash push
+
+git stash list
+
+git stash apply stash@{number}(restore your specific code)
+
+git reset head- ~~soft (revoke previous commit) (head in here means current commit, head~ means previous commit)
+(soft means only revoke commit and keep it in stage area. on the other hand, hard means revoke anything include stage area)
+
+git checkout -- <file_name> (discard changes) (Unmodifying a Modified File)
+
+git restore --staged <filename> (Unstaging a Staged File with git restore)
+
+git restore <file> (Unmodifying a Modified File with git restore)
+
+
+git stash drop stash@{0} (delete one stash )
+
+git rebase A (if you are in branch B and you run this cmd your branch is going to move to branch A)
+
+git diff (To see what you’ve changed but not yet staged)
+
+.gitignore:
+
+The rules for the patterns you can put in the .gitignore file are as follows:
+
+Blank lines or lines starting with # are ignored.
+
+Standard glob patterns work, and will be applied recursively throughout the entire working tree.
+
+You can start patterns with a forward slash (/) to avoid recursivity.
+
+You can end patterns with a forward slash (/) to specify a directory.
+
+You can negate a pattern by starting it with an exclamation point (!).
+
+# ignore all .a files
+*.a
+
+# but do track lib.a, even though you're ignoring .a files above
+!lib.a
+
+# only ignore the TODO file in the current directory, not subdir/TODO
+/TODO
+
+# ignore all files in any directory named build
+build/
+
+# ignore doc/notes.txt, but not doc/server/arch.txt
+doc/*.txt
+
+# ignore all .pdf files in the doc/ directory and any of its subdirectories
+doc/**/*.pdf (Redundant Slashes (//) are Normalized: )
+
+$ git rm log/\*.log
+Note the backslash (\) in front of the *. This is necessary because Git does its own filename expansion in addition to your shell’s filename expansion. This command removes all files that have the .log extension in the log/ directory. Or, you can do something like this:
+
+$ git rm \*~
+
+git tag -a v1.4 -m "my version 1.4"
+
+git tag v1.4.1 (lightweight tag)
+
+git tag -a v1.2 9fceb02
+
+git tag -d v1.4
+
+git push <remote> :refs/tags/<tagname>:
+
+$ git push origin --delete <tagname>
