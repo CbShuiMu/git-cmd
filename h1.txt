@@ -133,7 +133,7 @@ git push <remote> :refs/tags/<tagname>:
 
 git push <remote> :refs/tags/<tagname>
 
-git push origin --delete <tagname>
+git push origin --delete tag <tagname>
 
 
 1231231231213123
